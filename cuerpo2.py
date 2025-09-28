@@ -10,7 +10,7 @@ try:
         port="5432"
     )
     cursor = conexion.cursor()
-    print("✅ Conectado a PostgreSQL")
+    print(" Conectado a PostgreSQL")
 
     # ============================
     # PEDIR DATOS AL USUARIO
@@ -31,7 +31,7 @@ try:
     """, (nombre, apellido, correo, telefono, direccion))
 
     nuevo_id = cursor.fetchone()[0]
-    print(f"🆕 Cliente insertado con ID: {nuevo_id}")
+    print(f" Cliente insertado con ID: {nuevo_id}")
 
     # Guardar cambios
     conexion.commit()
